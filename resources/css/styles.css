@@ -5,17 +5,21 @@
 *{
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
-html{
+html,
+body{
     background-color: #fff;
     color: #555;
     font-family: 'Lato','Ariel', sans-serif;
     font-size: 20px;
     font-weight:300;
     text-rendering:optimizeLegibility;
+    overflow-x: hidden;
 }
+section{padding: 80px 0;}
 
 .clearfix {zoom:1}
 .clearfix::after {
@@ -41,7 +45,8 @@ header{
     width: 1140 px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .logo{
     height:100px ;
@@ -66,7 +71,8 @@ header{
     text-transform: uppercase;
     font-size: 90%;
     border-bottom:  2px solid transparent;
-    transition: border-bottom 0.2s,
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s
 }
 .main-nav li a:hover,
 .main-nav li a:active{
@@ -79,12 +85,7 @@ header{
     margin-top: 100px;
     margin-bottom: 100px;
 }
-
-.section-features .long-copy{
-
-margin-bottom: 40px;
-}
-
+.section-features .long-copy{margin-bottom: 40px;}
 
 /*******************************/
 /* MEALS */
@@ -114,11 +115,16 @@ margin-bottom: 40px;
     opacity: 0.7;
     width: 100%;
     height: auto;
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
     transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 .meal-photo img:hover{
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
 }
 /*******************************/
@@ -128,7 +134,6 @@ margin-bottom: 40px;
 .section-steps{
     margin: 100px 0;
     background-color:rgb(216, 201, 201);
-    padding: 80px 0;
 }
 .steps-box:first-child{
     text-align: right;
@@ -193,7 +198,7 @@ margin-bottom: 40px;
 /* testimonials */
 /*******************************/
 .section-testimonials{
-padding: 100px 0;
+background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(./img/back-customers.jpg);
 background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./img/back-customers.jpg);
 background-size:cover; 
 color: #fff;
@@ -230,16 +235,14 @@ cite img{
 /*******************************/
 /* SIGN_UP */
 /*******************************/
-.section-plans{
-    padding: 60px 0 ;
-    background-color: rgb(216, 201, 201);
-}
+.section-plans{background-color: rgb(216, 201, 201);}
 .plan-box{
     background-color: #fff;
     border-radius: 5px;
     width: 90%;
     margin-left: 5%;
-    box-shadow: 0 2px 2px #e3e3e3;
+    -webkit-box-shadow: 0 2px 2px #e3e3e3;
+            box-shadow: 0 2px 2px #e3e3e3;
 }
 .plan-box div{
     padding: 15px;
@@ -277,9 +280,6 @@ cite img{
 /*******************************/
 /* form */
 /*******************************/
-.section-form{
-    padding: 80px 0 ;
-}
 .contact-form{
     width: 60%;
     margin: 0 auto;
@@ -335,6 +335,7 @@ footer{
     text-decoration: none;
     border:0;
     color:#888; 
+    -webkit-transition: color 0.2s; 
     transition: color 0.2s
 }
 .footer-nav li a:hover,
@@ -349,6 +350,7 @@ footer{
 #twitter,
 #googleplus,
 #instagram{
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -380,13 +382,8 @@ footer p{
     max-width: 1140px;
     margin:0 auto;
 }
-.section{
-    padding: 80px 0;
-}
-
-.box{
-    padding: 1%;
-}
+section{padding: 80px 0;}
+.box{padding: 1%;}
 
 /******** HEADING ************/
 h1,
@@ -395,9 +392,7 @@ h3{
     font-size: 240%;
     font-weight: 300;
     text-transform: uppercase;
-  
-    
-   }
+}
    h1{
     margin-top:0 ; 
     color: #fff;
@@ -424,7 +419,6 @@ h3{
      h3{
         font-size: 110%;
         margin-bottom: 15px;
-
      }
 
 
@@ -465,6 +459,7 @@ h3{
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: 1px solid #FF9800;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 .city-feature a:hover,
@@ -487,6 +482,7 @@ input[type= submit]{
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
  }
 
